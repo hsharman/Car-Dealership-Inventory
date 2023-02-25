@@ -58,12 +58,6 @@ bool testCar() {
     }
 
 
-
-
-
-
-
-
     return passed;
 }
 

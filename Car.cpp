@@ -49,7 +49,7 @@ int Car::getVehiclePrice() const{
  * Set Vehicle Year
  */
 void Car::setVehicleYear(int yr) {
-    int year = yr;
+    year = yr;
 
 }
 
@@ -57,7 +57,7 @@ void Car::setVehicleYear(int yr) {
  * Set Vehicle Make
  */
 void Car::setVehicleMake(string mk) {
-    string make = mk;
+    make = mk;
 
 }
 
@@ -65,7 +65,7 @@ void Car::setVehicleMake(string mk) {
  * Set Vehicle Model
  */
 void Car::setVehicleModel(string mdl) {
-    string model = mdl;
+    model = mdl;
 
 }
 
@@ -74,7 +74,7 @@ void Car::setVehicleModel(string mdl) {
  * Get Vehicle Price
  */
 void Car::setVehiclePrice(int prc) {
-    int price = prc;
+    price = prc;
 
 }
 
