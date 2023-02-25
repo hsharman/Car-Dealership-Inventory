@@ -1,7 +1,7 @@
 //
 // Created by Harry on 2/4/2023.
 //
-#include "car.h"
+#include "Car.h"
 
 Car::Car(){
     // need to add stuff
@@ -65,7 +65,7 @@ void Car::addCar(int year, string make, string model, double price, VehicleType 
 /*
  * Gets the vehicle year from the user
  */
-int Car::getVehicleYear(){
+int Car::getVehicleYear() const{
     return year;
 
 }
@@ -73,7 +73,7 @@ int Car::getVehicleYear(){
 /*
  * Gets the vehicle make from the user
  */
-string Car::getVehicleMake(){
+string Car::getVehicleMake() const{
     return make;
 
 
@@ -82,7 +82,7 @@ string Car::getVehicleMake(){
 /*
  * Gets the vehicle model from the user
  */
-string Car::getVehicleModel(){
+string Car::getVehicleModel() const{
     return model;
 }
 
@@ -90,7 +90,7 @@ string Car::getVehicleModel(){
 /*
  * Gets the vehicle price from the user
  */
-int Car::getVehiclePrice(){
+int Car::getVehiclePrice() const{
     return price;
 }
 
@@ -119,13 +119,6 @@ void Car::setVehicleModel(string mdl) {
 
 }
 
-/*
- * Set Vehicle Type
- */
-void Car::setVehicleType(VehicleType typ) {
-    VehicleType type = typ;
-
-}
 
 /*
  * Get Vehicle Price

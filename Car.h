@@ -5,7 +5,7 @@
 #ifndef M1OEP_HSHARMAN_CAR_H
 #define M1OEP_HSHARMAN_CAR_H
 
-#endif //M1OEP_HSHARMAN_CAR_H
+
 
 #include <vector>
 #include <string>
@@ -33,27 +33,14 @@ public:
 
 
 
-    /*
-     * Enum of possible vehicle types
-     */
-    enum VehicleType{
-        HATCHBACK,
-        SALOON,
-        WAGON,
-        MID_SIZE_SUV,
-        SUV,
-        TRUCK
-    };
-
 
     /*
      * Constructor
      */
-    Car(int yr, string mk, string mdl, double prc, VehicleType vtyp){
+    Car(int yr, string mk, string mdl, double prc){
         int year = yr;
         string make = mk;
         string model = mdl;
-        VehicleType type = vtyp;
         double price = prc;
 
     }
@@ -76,8 +63,6 @@ public:
 
     string getVehicleModel() const;
 
-    VehicleType getVehicleType() const;
-
     int getVehiclePrice() const;
 
 
@@ -88,8 +73,6 @@ public:
     void setVehicleMake(string mk);
 
     void setVehicleModel(string mdl);
-
-    void setVehicleType(VehicleType typ);
 
     void setVehiclePrice(int prc);
 
@@ -127,3 +110,5 @@ public:
 
 
 };
+
+#endif //M1OEP_HSHARMAN_CAR_H

@@ -7,7 +7,6 @@ using namespace std;
     string make;
     string model;
     double price;
-    VehicleType type;
     int bedLength;
     int towingCapcity;
     bool liftKit;

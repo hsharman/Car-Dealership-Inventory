@@ -7,7 +7,6 @@ SUV::SUV() {
     string make;
     string model;
     double price;
-    VehicleType type;
     int peopleCarryingCapacity;
     double trunkSize;
 }

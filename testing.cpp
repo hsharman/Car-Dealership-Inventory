@@ -1,4 +1,4 @@
-#include "car.h"
+#include "Car.h"
 #include "truck.h"
 #include "SUV.h"
 #include "convertible.h"
@@ -27,7 +27,10 @@ int main() {
 }
 
 bool testCar() {
+    bool passed = true;
 
+
+    return passed;
 }
 
 bool testTruck() {
@@ -52,9 +55,13 @@ bool testTruck() {
 }
 
 bool testSUV() {
+    bool passed = true;
 
+    return passed;
 }
 
 bool testConvertible() {
+    bool passed = true;
 
+    return passed;
 }

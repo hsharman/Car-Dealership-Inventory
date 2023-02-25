@@ -1,7 +1,7 @@
 #ifndef M2OEP_HSHARMAN_WBRADFOR_CONVERTIBLE_H
 #define M2OEP_HSHARMAN_WBRADFOR_CONVERTIBLE_H
 
-#include "car.h"
+#include "Car.h"
 
 class Convertible : public Car {
 private:
@@ -12,7 +12,7 @@ public:
 
     // Constructors
     Convertible();
-    Convertible(int year, string make, string model, double price, VehicleType type,
+    Convertible(int year, string make, string model, double price,
           bool spoiler, double convertibleTopLength, int horsePower);
 
     // Getters

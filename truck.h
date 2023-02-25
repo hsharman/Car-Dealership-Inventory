@@ -1,7 +1,7 @@
 #ifndef M2OEP_HSHARMAN_WBRADFOR_TRUCK_H
 #define M2OEP_HSHARMAN_WBRADFOR_TRUCK_H
 
-#include "car.h"
+#include "Car.h"
 
 class Truck : public Car {
 private:
@@ -14,7 +14,7 @@ public:
     // Constructors
     Truck();
 
-    Truck(int year, string make, string model, double price, VehicleType type,
+    Truck(int year, string make, string model, double price,
         int bedLength, int towingCapcity, bool liftKit);
 
     // Getter

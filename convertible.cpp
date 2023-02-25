@@ -7,7 +7,6 @@ Convertible::Convertible() {
     string make;
     string model;
     double price;
-    VehicleType type;
     bool spoiler;
     double convertibleTopLength;
     int horsePower;

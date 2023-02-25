@@ -1,7 +1,7 @@
 #ifndef M2OEP_HSHARMAN_WBRADFOR_SUV_H
 #define M2OEP_HSHARMAN_WBRADFOR_SUV_H
 
-#include "car.h"
+#include "Car.h"
 
 class SUV : public Car{
 private:
@@ -11,7 +11,7 @@ public:
 
     // Constructors
     SUV();
-    SUV(int year, string make, string model, double price, VehicleType type, int peopleCarryingCapacity,
+    SUV(int year, string make, string model, double price, int peopleCarryingCapacity,
         double trunkSize);
 
     // Getter
