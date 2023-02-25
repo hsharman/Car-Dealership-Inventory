@@ -3,8 +3,8 @@
 //
 #include "car.h"
 
-CarDealership::CarDealership(){
-    initialInstructions();
+Car::Car(){
+    // need to add stuff
 
 }
 
@@ -12,7 +12,7 @@ CarDealership::CarDealership(){
 /*
      * Add car to the vector 'DealershipInventory'
      */
-void CarDealership::addCar(int year, string make, string model, double price, VehicleType type){
+void Car::addCar(int year, string make, string model, double price, VehicleType type){
     // Create car
     Car car;
 
@@ -34,7 +34,7 @@ void CarDealership::addCar(int year, string make, string model, double price, Ve
 /*
      * Prints out the inventory of the dealership
      */
-void CarDealership::printInventory() {
+/*void Car::printInventory() {
     cout << "\nCars in inventory: " << DealershipInventory.size() << endl;
     for (int i = 0; i < DealershipInventory.size(); i++) {
         cout << "Car " << (i + 1) << ": " << endl;
@@ -48,7 +48,7 @@ void CarDealership::printInventory() {
                                (DealershipInventory[i].type == MID_SIZE_SUV ? "Mid Size SUV\n" :
                                 (DealershipInventory[i].type == SUV ? "SUV" : "Truck\n"))))) << endl;
     }
-}
+}*/
 
 
 
@@ -56,43 +56,24 @@ void CarDealership::printInventory() {
 /*
      * Initial Instructions
      */
-void CarDealership::initialInstructions() {
+/*void Car::initialInstructions() {
     cout << "This program adds cars to a dealership's inventory\n"
             "To quit, press 'ENTER'\n" << endl;
-}
+}*/
 
 
 /*
  * Gets the vehicle year from the user
  */
-int CarDealership::getVehicleYear(ostream &outs, istream &ins){
-    int year;
-
-    while(true) {
-        printYearInstructions(outs);
-        if (cin >> year && (year >= 1908 && year <= 2024))  {
-            cin.clear();
-            return year;
-
-        }
-        cout << "Please enter a year from 1908-2024" << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    }
+int Car::getVehicleYear(){
+    return year;
 
 }
 
 /*
  * Gets the vehicle make from the user
  */
-string CarDealership::getVehicleMake(ostream &outs, istream &ins){
-    string make;
-    int i;
-    string statement = printMakeInstructions(outs);
-    outs << statement;
-    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    getline(ins, make);
-
+string Car::getVehicleMake(){
     return make;
 
 
@@ -101,12 +82,7 @@ string CarDealership::getVehicleMake(ostream &outs, istream &ins){
 /*
  * Gets the vehicle model from the user
  */
-string CarDealership::getVehicleModel(ostream &outs, istream &ins){
-    string model;
-    string statement = printModelInstructions(outs);
-    outs << statement;
-    getline(ins, model);
-
+string Car::getVehicleModel(){
     return model;
 }
 
@@ -114,29 +90,51 @@ string CarDealership::getVehicleModel(ostream &outs, istream &ins){
 /*
  * Gets the vehicle price from the user
  */
-int CarDealership::getVehiclePrice(ostream &outs, istream &ins){
-    int price;
-
-    while(true) {
-        printPriceInstructions(outs);
-        if (cin >> price && (price > 0))  {
-            cin.clear();
-            return price;
-
-        }
-        cout << "Please enter a price > $0" << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    }
+int Car::getVehiclePrice(){
+    return price;
+}
 
 
+/*
+ * Get Vehicle Year
+ */
+void Car::setVehicleYear(int yr) {
+    int year = yr;
 
 }
 
 /*
+ * Get Vehicle Make
+ */
+void Car::setVehicleMake(string mk) {
+    string make = mk;
+
+}
+
+/*
+ * Get Vehicle Model
+ */
+void Car::setVehicleModel(string mdl) {
+    string model = mdl;
+
+}
+
+/*
+ * Get Vehicle Price
+ */
+void Car::setVehiclePrice(int prc) {
+    int price = prc;
+
+}
+
+
+
+
+
+/*
  * Get choice of vehicle type
  */
-int CarDealership::getVehicleType(ostream &outs, istream &ins){
+/*int CarDealership::getVehicleType(ostream &outs, istream &ins){
     int choice;
 
     while(true) {
@@ -153,12 +151,13 @@ int CarDealership::getVehicleType(ostream &outs, istream &ins){
     }
 
 
-}
+}*/
 
 
 /*
  * Determines if user wants to add another vehicle
- */
+ *//*
+
 int CarDealership::addAnotherVehicle(ostream &outs, istream &ins){
     int choice;
 
@@ -180,48 +179,60 @@ int CarDealership::addAnotherVehicle(ostream &outs, istream &ins){
 
 
 
+*/
 /*
  * Prints out the year instructions
- */
+ *//*
+
 void CarDealership::printYearInstructions(ostream &outs){
     outs << "Please enter the year of the vehicle (1908-2024):";
 
 }
 
+*/
 /*
 * Prints out the make instructions
-*/
+*//*
+
 string CarDealership::printMakeInstructions(ostream &outs){
     return "Please enter the make of the vehicle: ";
 }
 
+*/
 /*
  * Prints out the model instructions
- */
+ *//*
+
 string CarDealership::printModelInstructions(ostream &outs){
     return "Please enter the model of the vehicle: ";
 }
 
+*/
 /*
 * Prints out the price instructions
-*/
+*//*
+
 void CarDealership::printPriceInstructions(ostream &outs){
     outs << "Please enter the price of the vehicle:";
 }
 
+*/
 /*
 * Prints out the vehicle type instructions
-*/
+*//*
+
 void CarDealership::printVehicleTypeInstructions(ostream &outs){
     outs << "(1): Hatchback (2): Saloon (3): SUV (4): Mid Size SUV (5): Truck\n"
             "Please enter the type of vehicle you wish to add:";
 
 }
 
+*/
 /*
  * Prints out the add another vehicle instructions
- */
+ *//*
+
 void CarDealership::printAddAnotherVehicleInstructions(ostream &outs) {
     outs << "(1): Yes (2): No\n"
             "Would you like to enter another vehicle?";
-}
+}*/

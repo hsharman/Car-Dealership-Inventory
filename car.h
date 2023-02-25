@@ -16,19 +16,35 @@
 using namespace std;
 using std::numeric_limits;
 
-class CarDealership{
+class Car{
 
 public:
 
     /*
      * Default constructor
      */
-    CarDealership();
+    Car();
+
+
+    /*
+     * Constructor
+     */
+    Car(int yr, string mk, string mdl, double prc){
+        int year = yr;
+        string make = mk;
+        string model = mdl;
+        double price = prc;
+
+    }
+
+
+
+
 
     /*
      * Enum of possible vehicle types
      */
-    enum VehicleType{
+    /*enum VehicleType{
         HATCHBACK,
         SALOON,
         WAGON,
@@ -36,28 +52,25 @@ public:
         SUV,
         TRUCK
 
-    };
+    };*/
 
     /*
      *  Struct of the characteristics of the car
-     */
+     *//*
     struct Car{
         int year;
         string make;
         string model;
         double price;
         VehicleType type;
-    };
+    };*/
 
     vector<Car> DealershipInventory;
 
 
 
-    void addCar(int year, string make, string model, double price, VehicleType type);
 
-    void printInventory();
-
-    void initialInstructions();
+    // getters
 
     int getVehicleYear(ostream &outs, istream &ins);
 
@@ -67,9 +80,35 @@ public:
 
     int getVehiclePrice(ostream &outs, istream &ins);
 
-    int getVehicleType(ostream &outs, istream &ins);
 
-    int addAnotherVehicle(ostream &outs, istream &ins);
+    // setters
+
+    void setVehicleYear();
+
+    void setVehicleMake();
+
+    void setVehicleModel();
+
+    void setVehiclePrice();
+
+
+
+
+
+
+
+
+
+
+    //int getVehicleType(ostream &outs, istream &ins);
+
+
+
+
+
+
+
+    /*  int addAnotherVehicle(ostream &outs, istream &ins);
 
     void printYearInstructions(ostream &outs);
 
@@ -81,10 +120,15 @@ public:
 
     void printVehicleTypeInstructions(ostream &outs);
 
-    void printAddAnotherVehicleInstructions(ostream &outs);
+    void printAddAnotherVehicleInstructions(ostream &outs);*/
 
 
+/*
+ *  void addCar(int year, string make, string model, double price, VehicleType type);
 
+    void printInventory();
+
+    void initialInstructions();*/
 
 
 
