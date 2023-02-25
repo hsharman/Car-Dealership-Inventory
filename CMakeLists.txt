@@ -4,4 +4,4 @@ project(M2OEP_hsharman_wbradfor)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(M2OEP_hsharman_wbradfor
-        main.cpp car.h car.cpp)
+        main.cpp car.h car.cpp truck.h SUV.h)

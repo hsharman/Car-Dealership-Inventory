@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
 
-    CarDealership dealership;
+    Car dealership;
 
 
     int userVehicleTypeNum;

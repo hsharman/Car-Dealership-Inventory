@@ -18,6 +18,12 @@ using std::numeric_limits;
 
 class Car{
 
+private:
+    int year;
+    string make;
+    string model;
+    double price;
+
 public:
 
     /*
@@ -26,13 +32,28 @@ public:
     Car();
 
 
+
+    /*
+     * Enum of possible vehicle types
+     */
+    enum VehicleType{
+        HATCHBACK,
+        SALOON,
+        WAGON,
+        MID_SIZE_SUV,
+        SUV,
+        TRUCK
+    };
+
+
     /*
      * Constructor
      */
-    Car(int yr, string mk, string mdl, double prc){
+    Car(int yr, string mk, string mdl, double prc, VehicleType vtyp){
         int year = yr;
         string make = mk;
         string model = mdl;
+        VehicleType type = vtyp;
         double price = prc;
 
     }
@@ -41,28 +62,6 @@ public:
 
 
 
-    /*
-     * Enum of possible vehicle types
-     */
-    /*enum VehicleType{
-        HATCHBACK,
-        SALOON,
-        WAGON,
-        MID_SIZE_SUV,
-        SUV,
-        TRUCK
-    };*/
-
-    /*
-     *  Struct of the characteristics of the car
-     *//*
-    struct Car{
-        int year;
-        string make;
-        string model;
-        double price;
-        VehicleType type;
-    };*/
 
     vector<Car> DealershipInventory;
 
@@ -71,24 +70,28 @@ public:
 
     // getters
 
-    int getVehicleYear(ostream &outs, istream &ins);
+    int getVehicleYear() const;
 
-    string getVehicleMake(ostream &outs, istream &ins);
+    string getVehicleMake() const;
 
-    string getVehicleModel(ostream &outs, istream &ins);
+    string getVehicleModel() const;
 
-    int getVehiclePrice(ostream &outs, istream &ins);
+    VehicleType getVehicleType() const;
+
+    int getVehiclePrice() const;
 
 
     // setters
 
-    void setVehicleYear();
+    void setVehicleYear(int yr);
 
-    void setVehicleMake();
+    void setVehicleMake(string mk);
 
-    void setVehicleModel();
+    void setVehicleModel(string mdl);
 
-    void setVehiclePrice();
+    void setVehicleType(VehicleType typ);
+
+    void setVehiclePrice(int prc);
 
 
 

@@ -11,7 +11,7 @@ Car::Car(){
 
 /*
      * Add car to the vector 'DealershipInventory'
-     */
+     *//*
 void Car::addCar(int year, string make, string model, double price, VehicleType type){
     // Create car
     Car car;
@@ -28,7 +28,7 @@ void Car::addCar(int year, string make, string model, double price, VehicleType 
     DealershipInventory.push_back(car);
 
 
-}
+}*/
 
 
 /*
@@ -96,7 +96,7 @@ int Car::getVehiclePrice(){
 
 
 /*
- * Get Vehicle Year
+ * Set Vehicle Year
  */
 void Car::setVehicleYear(int yr) {
     int year = yr;
@@ -104,7 +104,7 @@ void Car::setVehicleYear(int yr) {
 }
 
 /*
- * Get Vehicle Make
+ * Set Vehicle Make
  */
 void Car::setVehicleMake(string mk) {
     string make = mk;
@@ -112,10 +112,18 @@ void Car::setVehicleMake(string mk) {
 }
 
 /*
- * Get Vehicle Model
+ * Set Vehicle Model
  */
 void Car::setVehicleModel(string mdl) {
     string model = mdl;
+
+}
+
+/*
+ * Set Vehicle Type
+ */
+void Car::setVehicleType(VehicleType typ) {
+    VehicleType type = typ;
 
 }
 

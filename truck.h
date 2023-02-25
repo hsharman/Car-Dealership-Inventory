@@ -1,12 +1,12 @@
 #ifndef M2OEP_HSHARMAN_WBRADFOR_TRUCK_H
 #define M2OEP_HSHARMAN_WBRADFOR_TRUCK_H
 
-#include "Car.h"
+#include "car.h"
 
-class Truck :: public Car {
+class Truck : public Car {
 private:
 int bedLength;
-int towingCapacity
+int towingCapacity;
 bool liftKit;
 
 public:
