@@ -51,7 +51,6 @@ public:
         MID_SIZE_SUV,
         SUV,
         TRUCK
-
     };*/
 
     /*
@@ -109,25 +108,17 @@ public:
 
 
     /*  int addAnotherVehicle(ostream &outs, istream &ins);
-
     void printYearInstructions(ostream &outs);
-
     string printMakeInstructions(ostream &outs);
-
     string printModelInstructions(ostream &outs);
-
     void printPriceInstructions(ostream &outs);
-
     void printVehicleTypeInstructions(ostream &outs);
-
     void printAddAnotherVehicleInstructions(ostream &outs);*/
 
 
 /*
  *  void addCar(int year, string make, string model, double price, VehicleType type);
-
     void printInventory();
-
     void initialInstructions();*/
 
 

@@ -136,102 +136,75 @@ void Car::setVehiclePrice(int prc) {
  */
 /*int CarDealership::getVehicleType(ostream &outs, istream &ins){
     int choice;
-
     while(true) {
         printVehicleTypeInstructions(outs);
         if (cin >> choice && (choice == 1 | choice == 2 | choice == 3 | choice == 4 | choice == 5)) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-
             return choice;
-
         }
         cout << "Please enter a number 1-5!\n" << endl;
         cin.clear();
         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
     }
-
-
 }*/
 
 
 /*
  * Determines if user wants to add another vehicle
  *//*
-
 int CarDealership::addAnotherVehicle(ostream &outs, istream &ins){
     int choice;
-
     while(true) {
         printAddAnotherVehicleInstructions(outs);
         if (cin >> choice && (choice == 1 | choice == 2)) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             return choice;
-
         }
         cout << "Please enter either 1 or 2!\n" << endl;
         cin.clear();
         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
     }
-
 }
-
-
-
-
-
 */
 /*
  * Prints out the year instructions
  *//*
-
 void CarDealership::printYearInstructions(ostream &outs){
     outs << "Please enter the year of the vehicle (1908-2024):";
-
 }
-
 */
 /*
 * Prints out the make instructions
 *//*
-
 string CarDealership::printMakeInstructions(ostream &outs){
     return "Please enter the make of the vehicle: ";
 }
-
 */
 /*
  * Prints out the model instructions
  *//*
-
 string CarDealership::printModelInstructions(ostream &outs){
     return "Please enter the model of the vehicle: ";
 }
-
 */
 /*
 * Prints out the price instructions
 *//*
-
 void CarDealership::printPriceInstructions(ostream &outs){
     outs << "Please enter the price of the vehicle:";
 }
-
 */
 /*
 * Prints out the vehicle type instructions
 *//*
-
 void CarDealership::printVehicleTypeInstructions(ostream &outs){
     outs << "(1): Hatchback (2): Saloon (3): SUV (4): Mid Size SUV (5): Truck\n"
             "Please enter the type of vehicle you wish to add:";
-
 }
-
 */
 /*
  * Prints out the add another vehicle instructions
  *//*
-
 void CarDealership::printAddAnotherVehicleInstructions(ostream &outs) {
     outs << "(1): Yes (2): No\n"
             "Would you like to enter another vehicle?";
