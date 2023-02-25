@@ -4,62 +4,12 @@
 #include "Car.h"
 
 Car::Car(){
-    // need to add stuff
+    int year;
+    string make;
+    string model;
+    double price;
 
 }
-
-
-/*
-     * Add car to the vector 'DealershipInventory'
-     *//*
-void Car::addCar(int year, string make, string model, double price, VehicleType type){
-    // Create car
-    Car car;
-
-    // Set each thing
-    car.year = year;
-    car.make = make;
-    car.model = model;
-    car.price = price;
-    car.type = type;
-
-    // add car to the inventory
-
-    DealershipInventory.push_back(car);
-
-
-}*/
-
-
-/*
-     * Prints out the inventory of the dealership
-     */
-/*void Car::printInventory() {
-    cout << "\nCars in inventory: " << DealershipInventory.size() << endl;
-    for (int i = 0; i < DealershipInventory.size(); i++) {
-        cout << "Car " << (i + 1) << ": " << endl;
-        cout << "Year: " << DealershipInventory[i].year << endl;
-        cout << "Make: " << DealershipInventory[i].make << endl;
-        cout << "Model: " << DealershipInventory[i].model << endl;
-        cout << "Price: $" << DealershipInventory[i].price << endl;
-        cout << "Type: " << (DealershipInventory[i].type == HATCHBACK ? "Hatchback\n":
-                             (DealershipInventory[i].type == SALOON ? "Saloon\n":
-                              (DealershipInventory[i].type == WAGON ? "Wagon\n" :
-                               (DealershipInventory[i].type == MID_SIZE_SUV ? "Mid Size SUV\n" :
-                                (DealershipInventory[i].type == SUV ? "SUV" : "Truck\n"))))) << endl;
-    }
-}*/
-
-
-
-
-/*
-     * Initial Instructions
-     */
-/*void Car::initialInstructions() {
-    cout << "This program adds cars to a dealership's inventory\n"
-            "To quit, press 'ENTER'\n" << endl;
-}*/
 
 
 /*
@@ -127,6 +77,68 @@ void Car::setVehiclePrice(int prc) {
     int price = prc;
 
 }
+
+
+
+
+/*
+     * Add car to the vector 'DealershipInventory'
+     *//*
+void Car::addCar(int year, string make, string model, double price, VehicleType type){
+    // Create car
+    Car car;
+
+    // Set each thing
+    car.year = year;
+    car.make = make;
+    car.model = model;
+    car.price = price;
+    car.type = type;
+
+    // add car to the inventory
+
+    DealershipInventory.push_back(car);
+
+
+}*/
+
+
+/*
+     * Prints out the inventory of the dealership
+     */
+/*void Car::printInventory() {
+    cout << "\nCars in inventory: " << DealershipInventory.size() << endl;
+    for (int i = 0; i < DealershipInventory.size(); i++) {
+        cout << "Car " << (i + 1) << ": " << endl;
+        cout << "Year: " << DealershipInventory[i].year << endl;
+        cout << "Make: " << DealershipInventory[i].make << endl;
+        cout << "Model: " << DealershipInventory[i].model << endl;
+        cout << "Price: $" << DealershipInventory[i].price << endl;
+        cout << "Type: " << (DealershipInventory[i].type == HATCHBACK ? "Hatchback\n":
+                             (DealershipInventory[i].type == SALOON ? "Saloon\n":
+                              (DealershipInventory[i].type == WAGON ? "Wagon\n" :
+                               (DealershipInventory[i].type == MID_SIZE_SUV ? "Mid Size SUV\n" :
+                                (DealershipInventory[i].type == SUV ? "SUV" : "Truck\n"))))) << endl;
+    }
+}*/
+
+
+
+
+/*
+     * Initial Instructions
+     */
+/*void Car::initialInstructions() {
+    cout << "This program adds cars to a dealership's inventory\n"
+            "To quit, press 'ENTER'\n" << endl;
+}*/
+
+
+
+
+
+
+
 
 
 
