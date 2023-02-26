@@ -194,6 +194,47 @@ int main() {
 
                 userConvertible.setVehicleMileage(mileage);
 
+                char spoilerChoice;
+                cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+                while (true) {
+                    if (cin >> spoilerChoice && (spoilerChoice == 'Y' || spoilerChoice == 'y' || spoilerChoice == 'N' || spoilerChoice == 'n')) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter Y/N!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userConvertible.setSpoiler(spoilerChoice);
+
+                int topLength;
+                cout << "What's the length of the top? " << endl;
+                while (true) {
+                    if (cin >> topLength && (topLength > 0)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid top length!!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userConvertible.setConvertibleTopLength(topLength);
+
+                int horsepower;
+                cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+                while (true) {
+                    if (cin >> horsepower && horsepower > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid horsepower number!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userConvertible.setHorsePower(horsepower);
+
 
                 VehicleInventory.push_back(userConvertible);
 
