@@ -12,3 +12,4 @@ offroadVehicle - groundClearance, winchAttached, tireSize
 # Main Program
 
 # Testing Program
+The testing program is designed with methods for each class (car, truck, etc) that test the functions within each method. This mainly includes testing the getters and setters of each object to confirm that the functions work properly with each field.
