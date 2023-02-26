@@ -29,6 +29,19 @@ int main() {
     string model;
     double price;
     int mileage;
+    char spoilerChoice;
+    int topLength;
+    int horsepower;
+    double clearance;
+    bool winch;
+    string tireSize;
+    int peopleCapacity;
+    double trunkSize;
+    int bedLength;
+    int towCapacity;
+    bool liftKit;
+
+
 
     while (true){
 
@@ -56,6 +69,10 @@ int main() {
         offroadVehicle userOffRoadVehicle;
         SUV userSUV;
         Truck userTruck;
+
+
+
+
         switch(vehicleChoice){
             // Generic Car
             case 1:
@@ -194,8 +211,10 @@ int main() {
 
                 userConvertible.setVehicleMileage(mileage);
 
-                char spoilerChoice;
-                cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+                /*
+                 * Set spoiler choice
+                 */
+                cout << "Does the convertible have a spoiler? (Y/N) " << endl;
                 while (true) {
                     if (cin >> spoilerChoice && (spoilerChoice == 'Y' || spoilerChoice == 'y' || spoilerChoice == 'N' || spoilerChoice == 'n')) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -206,9 +225,20 @@ int main() {
                     cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
                 }
 
-                userConvertible.setSpoiler(spoilerChoice);
+                if (liftKit == 'Y' || liftKit == 'y'){
+                    userConvertible.setSpoiler(true);
+                }
+                else{
+                    userConvertible.setSpoiler(false);
+                }
 
-                int topLength;
+
+
+
+                /*
+                 * Set top length
+                 */
+
                 cout << "What's the length of the top? " << endl;
                 while (true) {
                     if (cin >> topLength && (topLength > 0)) {
@@ -222,8 +252,10 @@ int main() {
 
                 userConvertible.setConvertibleTopLength(topLength);
 
-                int horsepower;
-                cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+                /*
+                 * Set horsepower
+                 */
+                cout << "How much horsepower does the convertible have?" << endl;
                 while (true) {
                     if (cin >> horsepower && horsepower > 0) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -242,12 +274,111 @@ int main() {
 
                 // Off-Road Vehicle
             case 3:
-                cout << "Off-Road Vehicle" << endl;
-               /* userOffRoadVehicle.setVehicleYear(userOffRoadVehicle.getVehicleYear(cout, cin));
-                userOffRoadVehicle.setVehicleMake(userOffRoadVehicle.getVehicleMake(cout, cin));
-                userOffRoadVehicle.setVehicleModel(userOffRoadVehicle.getVehicleModel(cout, cin));
-                userOffRoadVehicle.setVehiclePrice(userOffRoadVehicle.getVehiclePrice(cout, cin));
-                userOffRoadVehicle.setVehicleMileage(userOffRoadVehicle.getVehicleMileage(cout, cin));*/
+                /*
+                 * Set Year
+                 */
+                cout << "Enter the year of the Off-Road Vehicle (1908-2024): ";
+                while (true) {
+                    if (cin >> year && (year >= 1908 && year <= 2024)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a year 1908-2024!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userOffRoadVehicle.setVehicleYear(year);
+
+                /*
+                 * Set Make
+                 */
+                cout << "Enter the make of the Off-Road Vehicle" << endl;
+                getline(cin, make);
+                cin.clear();
+                userCar.setVehicleMake(make);
+
+                /*
+                 * Set Model
+                 */
+                cout << "Enter the model of the Off-Road Vehicle" << endl;
+                getline(cin, model);
+                cin.clear();
+                userOffRoadVehicle.setVehicleModel(model);
+
+
+                /*
+                 * Set Price
+                 */
+                cout << "Enter the price of the Off-Road Vehicle: ";
+                while (true) {
+                    if (cin >> price && price >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid price!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userOffRoadVehicle.setVehiclePrice(price);
+
+
+                /*
+                 * Set Mileage
+                 */
+                cout << "Enter the mileage of the Off-Road Vehicle: ";
+                while (true) {
+                    if (cin >> mileage && mileage >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid mileage!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userOffRoadVehicle.setVehicleMileage(mileage);
+
+                /*
+                 * Set ground clearance
+                 */
+                cout << "Enter the ground clearance of the Off-Road Vehicle" << endl;
+                while (true) {
+                    if (cin >> clearance && clearance > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid ground clearance distance!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userOffRoadVehicle.setGroundClearance(clearance);
+
+                /*
+                 * Set winch
+                 */
+                cout << "Does the Off-Road Vehicle have a winch? Y/N" << endl;
+                while (true) {
+                    if (cin >> winch && (winch == 'Y' || winch == 'y' || winch == 'N' || winch == 'n')) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter Y/N!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userOffRoadVehicle.setWinchAttached(winch);
+
+                /*
+                 * Set tire size
+                 */
+                cout << "Enter the tire size" << endl;
+                getline(cin, tireSize);
+                cin.clear();
+                userCar.setVehicleMake(tireSize);
+
+                userOffRoadVehicle.setTireSize(tireSize);
 
                 VehicleInventory.push_back(userOffRoadVehicle);
 
@@ -255,7 +386,102 @@ int main() {
 
             // SUV
             case 4:
-                cout << "SUV" << endl;
+                /*
+                 * Set Year
+                 */
+                cout << "Enter the year of the car (1908-2024): ";
+                while (true) {
+                    if (cin >> year && (year >= 1908 && year <= 2024)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a year 1908-2024!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userSUV.setVehicleYear(year);
+
+                /*
+                 * Set Make
+                 */
+                cout << "Enter the make of the car" << endl;
+                getline(cin, make);
+                cin.clear();
+                userSUV.setVehicleMake(make);
+
+                /*
+                 * Set Model
+                 */
+                cout << "Enter the model of the car" << endl;
+                getline(cin, model);
+                cin.clear();
+                userSUV.setVehicleModel(model);
+
+
+                /*
+                 * Set Price
+                 */
+                cout << "Enter the price of the vehicle: ";
+                while (true) {
+                    if (cin >> price && price >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid price!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userSUV.setVehiclePrice(price);
+
+
+                /*
+                 * Set Mileage
+                 */
+                cout << "Enter the mileage of the vehicle: ";
+                while (true) {
+                    if (cin >> mileage && mileage >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid mileage!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userSUV.setVehicleMileage(mileage);
+
+                /*
+                 * Set people capacity
+                 */
+                cout << "Enter the maximum people capacity: ";
+                while (true) {
+                    if (cin >> peopleCapacity && peopleCapacity > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid people capacity!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userSUV.setPeopleCarryingCapacity(peopleCapacity);
+
+                /*
+                 * Set trunk size
+                 */
+                cout << "Enter the truck size: ";
+                while (true) {
+                    if (cin >> trunkSize && trunkSize > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid trunk size!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userSUV.setTrunkSize(trunkSize);
+
 
                 VehicleInventory.push_back(userSUV);
 
@@ -263,23 +489,150 @@ int main() {
 
             // Truck
             case 5:
-                cout << "Truck" << endl;
+                /*
+                 * Set Year
+                 */
+                cout << "Enter the year of the car (1908-2024): ";
+                while (true) {
+                    if (cin >> year && (year >= 1908 && year <= 2024)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a year 1908-2024!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userTruck.setVehicleYear(year);
+
+                /*
+                 * Set Make
+                 */
+                cout << "Enter the make of the car" << endl;
+                getline(cin, make);
+                cin.clear();
+                userTruck.setVehicleMake(make);
+
+                /*
+                 * Set Model
+                 */
+                cout << "Enter the model of the car" << endl;
+                getline(cin, model);
+                cin.clear();
+                userTruck.setVehicleModel(model);
+
+
+                /*
+                 * Set Price
+                 */
+                cout << "Enter the price of the vehicle: ";
+                while (true) {
+                    if (cin >> price && price >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid price!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userTruck.setVehiclePrice(price);
+
+
+                /*
+                 * Set Mileage
+                 */
+                cout << "Enter the mileage of the vehicle: ";
+                while (true) {
+                    if (cin >> mileage && mileage >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid mileage!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userTruck.setVehicleMileage(mileage);
+
+
+                /*
+                 * Set bedLength
+                 */
+                cout << "Enter the bed length of the vehicle: ";
+                while (true) {
+                    if (cin >> bedLength && bedLength > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid bed length!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userTruck.setBedLength(bedLength);
+
+                /*
+                 * Set towingCapacity
+                 */
+                cout << "Enter the towing capacity of the vehicle: ";
+                while (true) {
+                    if (cin >> towCapacity && towCapacity > 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid tow capacity!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userTruck.setTowingCapacity(towCapacity);
+
+                /*
+                 * Set liftKit
+                 */
+                cout << "Does the vehicle have a lift kit? (Y/N) " << endl;
+                while (true) {
+                    if (cin >> liftKit && (liftKit == 'Y' || liftKit == 'y' || liftKit == 'N' || liftKit == 'n')) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter Y/N!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                if (liftKit == 'Y' || liftKit == 'y'){
+                    userTruck.setLiftKit(true);
+                }
+                else{
+                    userTruck.setLiftKit(false);
+                }
+
 
                 VehicleInventory.push_back(userTruck);
 
-                break;
 
         }
 
-
-        // Add vehicle to vector inventory vector
-
         // Print how many vehicles are in inventory
+        cout << "There are " << VehicleInventory.size() << " vehicles in the inventory" << endl;
 
         // Ask if user wants to add another vehicle to the inventory
+        cout << "Would you like to add another vehicle?" << endl;
+        char addAnother;
+        while (true) {
+            if (cin >> addAnother && (liftKit == 'Y' || liftKit == 'y' || liftKit == 'N' || liftKit == 'n')) {
+                cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                break;
+            }
+            cout << "Please enter Y/N!\n" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+        }
 
+        if (addAnother == 'Y' || addAnother == 'y'){
+            break;
+        }
 
-        break;
     }
 
     // Write vector elements to .csv file
