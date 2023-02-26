@@ -21,7 +21,7 @@ public:
     offroadVehicle();
 
     offroadVehicle(int year, string make, string model, int price, int mileage,
-                   double groundClearance, bool winchAttached, string tireSize);
+                   double groundClearace, bool winchAttached, string tireSize);
 
     // Getters
     double getGroundClearance() const;

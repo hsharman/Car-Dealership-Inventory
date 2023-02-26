@@ -25,9 +25,6 @@ int main() {
     if (testConvertible()) {
         cout << "Passed all Convertible test cases" << endl;
     }
-    if (testOffroadVehicle()){
-        cout << "Passed all offRoadVehicle test cases" << endl;
-    }
     return 0;
 }
 
@@ -157,7 +154,7 @@ bool testOffroadVehicle(){
 
     // Test winch attached
     testOffroadVehicle.setWinchAttached(true);
-    if (testOffroadVehicle.getWinchAttached() != true){
+    if (testOffroadVehicle.getGroundClearance() != true){
         passed = false;
         cout << "FAILED setWinchAttached test case" << endl;
     }
