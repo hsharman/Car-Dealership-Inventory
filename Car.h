@@ -23,6 +23,7 @@ private:
     string make;
     string model;
     double price;
+    int mileage;
 
 public:
 
@@ -37,11 +38,13 @@ public:
     /*
      * Constructor
      */
-    Car(int yr, string mk, string mdl, double prc){
+    Car(int yr, string mk, string mdl, double prc, int mlge){
         int year = yr;
         string make = mk;
         string model = mdl;
         double price = prc;
+        int mileage = mlge;
+
 
     }
 
@@ -65,6 +68,8 @@ public:
 
     int getVehiclePrice() const;
 
+    int getVehicleMileage() const;
+
 
     // setters
 
@@ -75,6 +80,8 @@ public:
     void setVehicleModel(string mdl);
 
     void setVehiclePrice(int prc);
+
+    void setVehicleMileage(int mlge);
 
 
 

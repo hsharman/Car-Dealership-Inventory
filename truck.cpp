@@ -7,6 +7,7 @@ int year;
 string make;
 string model;
 double price;
+int mileage;
 int bedLength;
 int towingCapcity;
 bool liftKit;

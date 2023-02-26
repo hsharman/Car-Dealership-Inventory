@@ -8,12 +8,13 @@ Car::Car(){
     string make;
     string model;
     double price;
+    int mileage;
 
 }
 
 
 /*
- * Gets the vehicle year from the user
+ * Gets the vehicle year
  */
 int Car::getVehicleYear() const{
     return year;
@@ -21,7 +22,7 @@ int Car::getVehicleYear() const{
 }
 
 /*
- * Gets the vehicle make from the user
+ * Gets the vehicle make
  */
 string Car::getVehicleMake() const{
     return make;
@@ -30,7 +31,7 @@ string Car::getVehicleMake() const{
 }
 
 /*
- * Gets the vehicle model from the user
+ * Gets the vehicle model
  */
 string Car::getVehicleModel() const{
     return model;
@@ -38,10 +39,17 @@ string Car::getVehicleModel() const{
 
 
 /*
- * Gets the vehicle price from the user
+ * Gets the vehicle price
  */
 int Car::getVehiclePrice() const{
     return price;
+}
+
+/*
+ * Gets the vehicle milleage
+ */
+int Car::getVehicleMileage() const {
+    return mileage;
 }
 
 
@@ -71,14 +79,19 @@ void Car::setVehicleModel(string mdl) {
 
 
 /*
- * Get Vehicle Price
+ * Set Vehicle Price
  */
 void Car::setVehiclePrice(int prc) {
     price = prc;
 
 }
 
-
+/*
+ * Set Vehicle Mileage
+ */
+void Car::setVehicleMileage(int mlge) {
+    mileage = mlge;
+}
 
 
 /*

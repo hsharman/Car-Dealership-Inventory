@@ -14,7 +14,7 @@ public:
     // Constructors
     Truck();
 
-    Truck(int year, string make, string model, double price,
+    Truck(int year, string make, string model, double price, int mileage,
         int bedLength, int towingCapcity, bool liftKit);
 
     // Getter
@@ -30,6 +30,8 @@ public:
     void setTowingCapacity(int newTowingCapacity);
 
     void setLiftKit(bool newLiftKit);
+
+    bool isTowingCapacitySufficient(int lbs) const;
 
 };
 

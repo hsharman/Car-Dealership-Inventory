@@ -2,12 +2,14 @@
 #include "truck.h"
 #include "SUV.h"
 #include "convertible.h"
+#include "offroadVehicle.h"
 using namespace std;
 
 bool testCar();
 bool testTruck();
 bool testSUV();
 bool testConvertible();
+bool testOffroadVehicle();
 
 int main() {
     srand(time(NULL));
@@ -55,6 +57,13 @@ bool testCar() {
     if (testingCar.getVehiclePrice() != 175000){
         passed = false;
         cout << "FAILED setVehiclePrice test case" << endl;
+    }
+
+    // Test vehicle mileage
+    testingCar.setVehicleMileage(42000);
+    if (testingCar.getVehicleMileage() != 42000){
+        passed = false;
+        cout << "FAILED setVehicleMileage test case" << endl;
     }
 
 
@@ -131,3 +140,37 @@ bool testConvertible() {
 
     return passed;
 }
+
+bool testOffroadVehicle(){
+    bool passed = true;
+    offroadVehicle testOffroadVehicle;
+
+    // Test ground clearance
+    testOffroadVehicle.setGroundClearance(9.7);
+    if (testOffroadVehicle.getGroundClearance() != 9.7){
+        passed = false;
+        cout << "FAILED setGroundClearance test case" << endl;
+    }
+
+    // Test winch attached
+    testOffroadVehicle.setWinchAttached(true);
+    if (testOffroadVehicle.getGroundClearance() != true){
+        passed = false;
+        cout << "FAILED setWinchAttached test case" << endl;
+    }
+
+    // Test tire size
+    testOffroadVehicle.setTireSize("265/70R17");
+    if (testOffroadVehicle.getTireSize() != "265/70R17"){
+        passed = false;
+        cout << "FAILED setTireSize test case" << endl;
+    }
+
+    return passed;
+
+}
+/*
+ * int groundClearance;
+    bool winchAttached;
+    int tireSize;
+ */
