@@ -12,7 +12,7 @@ public:
 
     // Constructors
     Convertible();
-    Convertible(int year, string make, string model, double price,
+    Convertible(int year, string make, string model, double price, int mileage,
           bool spoiler, double convertibleTopLength, int horsePower);
 
     // Getters

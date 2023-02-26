@@ -11,8 +11,8 @@ public:
 
     // Constructors
     SUV();
-    SUV(int year, string make, string model, double price, int peopleCarryingCapacity,
-        double trunkSize);
+    SUV(int year, string make, string model, double price, int mileage,
+        int peopleCarryingCapacity, double trunkSize);
 
     // Getter
     int getPeopleCarryingCapacity() const;
