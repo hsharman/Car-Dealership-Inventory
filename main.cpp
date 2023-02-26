@@ -23,6 +23,13 @@ int main() {
     // Set the filename
     string filename = "../Car_Inventory.csv";
 
+
+    int year;
+    string make;
+    string model;
+    double price;
+    int mileage;
+
     while (true){
 
         // Determine what kind of vehicle the user wants to input
@@ -51,13 +58,71 @@ int main() {
         Truck userTruck;
         switch(vehicleChoice){
             // Generic Car
-
             case 1:
-                userCar.setVehicleYear(userCar.getVehicleYear(cout, cin));
-                userCar.setVehicleMake(userCar.getVehicleMake(cout, cin));
-                userCar.setVehicleModel(userCar.getVehicleModel(cout, cin));
-                userCar.setVehiclePrice(userCar.getVehiclePrice(cout, cin));
-                userCar.setVehicleMileage(userCar.getVehicleMileage(cout, cin));
+
+                /*
+                 * Set Year
+                 */
+                cout << "Enter the year of the car (1908-2024): ";
+                while (true) {
+                    if (cin >> year && (year >= 1908 && year <= 2024)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a year 1908-2024!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userCar.setVehicleYear(year);
+
+                /*
+                 * Set Make
+                 */
+                cout << "Enter the make of the car" << endl;
+                getline(cin, make);
+                cin.clear();
+                userCar.setVehicleMake(make);
+
+                /*
+                 * Set Model
+                 */
+                cout << "Enter the model of the car" << endl;
+                getline(cin, model);
+                cin.clear();
+                userCar.setVehicleModel(model);
+
+
+                /*
+                 * Set Price
+                 */
+                cout << "Enter the price of the vehicle: ";
+                while (true) {
+                    if (cin >> price && price >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid price!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userCar.setVehiclePrice(price);
+
+
+                /*
+                 * Set Mileage
+                 */
+                cout << "Enter the mileage of the vehicle: ";
+                while (true) {
+                    if (cin >> mileage && mileage >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid mileage!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userCar.setVehicleMileage(mileage);
 
                 VehicleInventory.push_back(userCar);
 
@@ -65,15 +130,70 @@ int main() {
 
             // Convertible
             case 2:
-                cout << "Convertible" << endl;
-                userConvertible.setVehicleYear(userConvertible.getVehicleYear(cout, cin));
-                userConvertible.setVehicleMake(userConvertible.getVehicleMake(cout, cin));
-                userConvertible.setVehicleModel(userConvertible.getVehicleModel(cout, cin));
-                userConvertible.setVehiclePrice(userConvertible.getVehiclePrice(cout, cin));
-                userConvertible.setVehicleMileage(userConvertible.getVehicleMileage(cout, cin));
-                userConvertible.setSpoiler(userConvertible.getSpoiler(cout, cin));
-                userConvertible.setConvertibleTopLength(userConvertible.getConvertibleTopLength(cout, cin));
-                userConvertible.setHorsePower(userConvertible.getHorsePower(cout, cin));
+                /*
+                 * Set Year
+                 */
+                cout << "Enter the year of the convertible (1908-2024): ";
+                while (true) {
+                    if (cin >> year && (year >= 1908 && year <= 2024)) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a year 1908-2024!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userConvertible.setVehicleYear(year);
+
+                /*
+                 * Set Make
+                 */
+                cout << "Enter the make of the convertible" << endl;
+                getline(cin, make);
+                cin.clear();
+                userConvertible.setVehicleMake(make);
+
+                /*
+                 * Set Model
+                 */
+                cout << "Enter the model of the convertible" << endl;
+                getline(cin, model);
+                cin.clear();
+                userConvertible.setVehicleModel(model);
+
+
+                /*
+                 * Set Price
+                 */
+                cout << "Enter the price of the convertible: ";
+                while (true) {
+                    if (cin >> price && price >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid price!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+                userConvertible.setVehiclePrice(price);
+
+
+                /*
+                 * Set Mileage
+                 */
+                cout << "Enter the mileage of the convertible: ";
+                while (true) {
+                    if (cin >> mileage && mileage >= 0) {
+                        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                        break;
+                    }
+                    cout << "Please enter a valid mileage!\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+                }
+
+                userConvertible.setVehicleMileage(mileage);
+
 
                 VehicleInventory.push_back(userConvertible);
 
@@ -82,11 +202,11 @@ int main() {
                 // Off-Road Vehicle
             case 3:
                 cout << "Off-Road Vehicle" << endl;
-                userOffRoadVehicle.setVehicleYear(userOffRoadVehicle.getVehicleYear(cout, cin));
+               /* userOffRoadVehicle.setVehicleYear(userOffRoadVehicle.getVehicleYear(cout, cin));
                 userOffRoadVehicle.setVehicleMake(userOffRoadVehicle.getVehicleMake(cout, cin));
                 userOffRoadVehicle.setVehicleModel(userOffRoadVehicle.getVehicleModel(cout, cin));
                 userOffRoadVehicle.setVehiclePrice(userOffRoadVehicle.getVehiclePrice(cout, cin));
-                userOffRoadVehicle.setVehicleMileage(userOffRoadVehicle.getVehicleMileage(cout, cin));
+                userOffRoadVehicle.setVehicleMileage(userOffRoadVehicle.getVehicleMileage(cout, cin));*/
 
                 VehicleInventory.push_back(userOffRoadVehicle);
 
@@ -122,6 +242,16 @@ int main() {
     }
 
     // Write vector elements to .csv file
+
+
+
+
+
+
+
+
+
+
 
 
 
