@@ -17,16 +17,16 @@ offroadVehicle::offroadVehicle() {
 }
 
 // Getters
-double offroadVehicle::getGroundClearance(ostream &outs, istream &ins){
+double offroadVehicle::getGroundClearance(){
     return groundClearance;
 
 }
 
-bool offroadVehicle::getWinchAttached(ostream &outs, istream &ins){
+bool offroadVehicle::getWinchAttached(){
     return winchAttached;
 }
 
-string offroadVehicle::getTireSize(ostream &outs, istream &ins){
+string offroadVehicle::getTireSize(){
     return tireSize;
 }
 

@@ -16,9 +16,9 @@ public:
           bool spoiler, double convertibleTopLength, int horsePower);
 
     // Getters
-    bool getSpoiler(ostream &outs, istream &ins);
-    double getConvertibleTopLength(ostream &outs, istream &ins);
-    int getHorsePower(ostream &outs, istream &ins);
+    bool getSpoiler();
+    double getConvertibleTopLength();
+    int getHorsePower();
 
     // Setters
     void setSpoiler(bool newSpoiler);

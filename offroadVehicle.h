@@ -24,11 +24,11 @@ public:
                    double groundClearace, bool winchAttached, string tireSize);
 
     // Getters
-    double getGroundClearance(ostream &outs, istream &ins);
+    double getGroundClearance();
 
-    bool getWinchAttached(ostream &outs, istream &ins);
+    bool getWinchAttached();
 
-    string getTireSize(ostream &outs, istream &ins);
+    string getTireSize();
 
 
     // Setters

@@ -16,8 +16,8 @@ Car::Car(){
 /*
  * Gets the vehicle year
  */
-int Car::getVehicleYear(ostream &outs, istream &ins){
-    outs << "Enter the year of the car (1908-2024): ";
+int Car::getVehicleYear(){
+    /*outs << "Enter the year of the car (1908-2024): ";
     while (true) {
         if (ins >> year && (year >= 1908 && year <= 2024)) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -26,7 +26,7 @@ int Car::getVehicleYear(ostream &outs, istream &ins){
         cout << "Please enter a year 1908-2024!\n" << endl;
         cin.clear();
         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    }
+    }*/
 
     return year;
 
@@ -35,10 +35,10 @@ int Car::getVehicleYear(ostream &outs, istream &ins){
 /*
  * Gets the vehicle make
  */
-string Car::getVehicleMake(ostream &outs, istream &ins){
-    string make;
+string Car::getVehicleMake(){
+    /*string make;
 
-    getline(ins, make);
+    getline(ins, make);*/
     return make;
 
 
@@ -47,9 +47,9 @@ string Car::getVehicleMake(ostream &outs, istream &ins){
 /*
  * Gets the vehicle model
  */
-string Car::getVehicleModel(ostream &outs, istream &ins){
-    string model;
-    getline(ins, model);
+string Car::getVehicleModel(){
+    /*string model;
+    getline(ins, model);*/
     return model;
 }
 
@@ -57,8 +57,8 @@ string Car::getVehicleModel(ostream &outs, istream &ins){
 /*
  * Gets the vehicle price
  */
-int Car::getVehiclePrice(ostream &outs, istream &ins){
-    outs << "Enter the price of the vehicle: ";
+int Car::getVehiclePrice(){
+    /*outs << "Enter the price of the vehicle: ";
     while (true) {
         if (ins >> price && price >= 0) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -67,15 +67,15 @@ int Car::getVehiclePrice(ostream &outs, istream &ins){
         cout << "Please enter a valid price!\n" << endl;
         cin.clear();
         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    }
+    }*/
     return price;
 }
 
 /*
  * Gets the vehicle mileage
  */
-int Car::getVehicleMileage(ostream &outs, istream &ins){
-    outs << "Enter the mileage of the vehicle: ";
+int Car::getVehicleMileage(){
+   /* outs << "Enter the mileage of the vehicle: ";
     while (true) {
         if (ins >> mileage && mileage >= 0) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -84,7 +84,7 @@ int Car::getVehicleMileage(ostream &outs, istream &ins){
         cout << "Please enter a valid mileage!\n" << endl;
         cin.clear();
         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-    }
+    }*/
 
     return mileage;
 }
