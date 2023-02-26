@@ -19,7 +19,7 @@ Car::Car(){
 int Car::getVehicleYear(ostream &outs, istream &ins){
     outs << "Enter the year of the car (1908-2024): ";
     while (true) {
-        if (cin >> year && (year >= 1908 && year <= 2024)) {
+        if (ins >> year && (year >= 1908 && year <= 2024)) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             break;
         }
@@ -60,7 +60,7 @@ string Car::getVehicleModel(ostream &outs, istream &ins){
 int Car::getVehiclePrice(ostream &outs, istream &ins){
     outs << "Enter the price of the vehicle: ";
     while (true) {
-        if (cin >> price && price >= 0) {
+        if (ins >> price && price >= 0) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             break;
         }
@@ -77,7 +77,7 @@ int Car::getVehiclePrice(ostream &outs, istream &ins){
 int Car::getVehicleMileage(ostream &outs, istream &ins){
     outs << "Enter the mileage of the vehicle: ";
     while (true) {
-        if (cin >> mileage && mileage >= 0) {
+        if (ins >> mileage && mileage >= 0) {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             break;
         }

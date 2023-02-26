@@ -13,15 +13,50 @@ Convertible::Convertible() {
     int horsePower;
 }
 
-bool Convertible::getSpoiler() const {
+bool Convertible::getSpoiler(ostream &outs, istream &ins) {
+    char choice;
+    cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+    while (true) {
+        if (ins >> choice && (choice == 'Y' || choice == 'y' || choice == 'N' || choice == 'n')) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter Y/N!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
+
     return spoiler;
 }
 
-double Convertible::getConvertibleTopLength() const {
+double Convertible::getConvertibleTopLength(ostream &outs, istream &ins)  {
+    int length;
+    cout << "What's the length of the top? " << endl;
+    while (true) {
+        if (ins >> length && (length > 0)) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter a valid top length!!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
+
     return convertibleTopLength;
 }
 
-int Convertible::getHorsePower() const {
+int Convertible::getHorsePower(ostream &outs, istream &ins)  {
+    int horsepower;
+    cout << "Does the vehicle have a spoiler> (Y/N) " << endl;
+    while (true) {
+        if (ins >> horsepower && horsepower > 0) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter a valid horsepower number!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
     return horsePower;
 }
 

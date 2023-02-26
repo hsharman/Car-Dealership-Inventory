@@ -8,7 +8,7 @@
 
 #include "Car.h"
 
-class offroadVehicle : Car{
+class offroadVehicle : public Car{
 
 private:
     double groundClearance;
@@ -24,11 +24,11 @@ public:
                    double groundClearace, bool winchAttached, string tireSize);
 
     // Getters
-    double getGroundClearance() const;
+    double getGroundClearance(ostream &outs, istream &ins);
 
-    bool getWinchAttached() const;
+    bool getWinchAttached(ostream &outs, istream &ins);
 
-    string getTireSize() const;
+    string getTireSize(ostream &outs, istream &ins);
 
 
     // Setters

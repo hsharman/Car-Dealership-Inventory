@@ -59,6 +59,8 @@ int main() {
                 userCar.setVehiclePrice(userCar.getVehiclePrice(cout, cin));
                 userCar.setVehicleMileage(userCar.getVehicleMileage(cout, cin));
 
+                VehicleInventory.push_back(userCar);
+
                 break;
 
             // Convertible
@@ -73,21 +75,37 @@ int main() {
                 userConvertible.setConvertibleTopLength(userConvertible.getConvertibleTopLength(cout, cin));
                 userConvertible.setHorsePower(userConvertible.getHorsePower(cout, cin));
 
+                VehicleInventory.push_back(userConvertible);
+
                 break;
 
                 // Off-Road Vehicle
             case 3:
                 cout << "Off-Road Vehicle" << endl;
+                userOffRoadVehicle.setVehicleYear(userOffRoadVehicle.getVehicleYear(cout, cin));
+                userOffRoadVehicle.setVehicleMake(userOffRoadVehicle.getVehicleMake(cout, cin));
+                userOffRoadVehicle.setVehicleModel(userOffRoadVehicle.getVehicleModel(cout, cin));
+                userOffRoadVehicle.setVehiclePrice(userOffRoadVehicle.getVehiclePrice(cout, cin));
+                userOffRoadVehicle.setVehicleMileage(userOffRoadVehicle.getVehicleMileage(cout, cin));
+
+                VehicleInventory.push_back(userOffRoadVehicle);
+
                 break;
 
             // SUV
             case 4:
                 cout << "SUV" << endl;
+
+                VehicleInventory.push_back(userSUV);
+
                 break;
 
             // Truck
             case 5:
                 cout << "Truck" << endl;
+
+                VehicleInventory.push_back(userTruck);
+
                 break;
 
         }
