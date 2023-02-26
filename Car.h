@@ -60,15 +60,15 @@ public:
 
     // getters
 
-    int getVehicleYear() const;
+    int getVehicleYear(ostream &outs, istream &ins);
 
-    string getVehicleMake() const;
+    string getVehicleMake(ostream &outs, istream &ins) ;
 
-    string getVehicleModel() const;
+    string getVehicleModel(ostream &outs, istream &ins);
 
-    int getVehiclePrice() const;
+    int getVehiclePrice(ostream &outs, istream &ins);
 
-    int getVehicleMileage() const;
+    int getVehicleMileage(ostream &outs, istream &ins);
 
 
     // setters

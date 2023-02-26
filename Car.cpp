@@ -16,7 +16,18 @@ Car::Car(){
 /*
  * Gets the vehicle year
  */
-int Car::getVehicleYear() const{
+int Car::getVehicleYear(ostream &outs, istream &ins){
+    outs << "Enter the year of the car (1908-2024): ";
+    while (true) {
+        if (cin >> year && (year >= 1908 && year <= 2024)) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter a year 1908-2024!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
+
     return year;
 
 }
@@ -24,7 +35,10 @@ int Car::getVehicleYear() const{
 /*
  * Gets the vehicle make
  */
-string Car::getVehicleMake() const{
+string Car::getVehicleMake(ostream &outs, istream &ins){
+    string make;
+
+    getline(ins, make);
     return make;
 
 
@@ -33,7 +47,9 @@ string Car::getVehicleMake() const{
 /*
  * Gets the vehicle model
  */
-string Car::getVehicleModel() const{
+string Car::getVehicleModel(ostream &outs, istream &ins){
+    string model;
+    getline(ins, model);
     return model;
 }
 
@@ -41,14 +57,35 @@ string Car::getVehicleModel() const{
 /*
  * Gets the vehicle price
  */
-int Car::getVehiclePrice() const{
+int Car::getVehiclePrice(ostream &outs, istream &ins){
+    outs << "Enter the price of the vehicle: ";
+    while (true) {
+        if (cin >> price && price >= 0) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter a valid price!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
     return price;
 }
 
 /*
- * Gets the vehicle milleage
+ * Gets the vehicle mileage
  */
-int Car::getVehicleMileage() const {
+int Car::getVehicleMileage(ostream &outs, istream &ins){
+    outs << "Enter the mileage of the vehicle: ";
+    while (true) {
+        if (cin >> mileage && mileage >= 0) {
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            break;
+        }
+        cout << "Please enter a valid mileage!\n" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+    }
+
     return mileage;
 }
 
