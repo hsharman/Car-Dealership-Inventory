@@ -1,7 +1,3 @@
-//
-// Created by Harry Sharman on 1/31/23.
-//
-
 #include "Car.h"
 #include "convertible.h"
 #include "offroadVehicle.h"
@@ -9,6 +5,7 @@
 #include "truck.h"
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -61,16 +58,12 @@ int main() {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
         }
 
-
-
         // Switch statement asking for all elements of that particular vehicle
         Car userCar;
         Convertible userConvertible;
         offroadVehicle userOffRoadVehicle;
         SUV userSUV;
         Truck userTruck;
-
-
 
 
         switch(vehicleChoice){
@@ -215,6 +208,7 @@ int main() {
                  * Set spoiler choice
                  */
                 cout << "Does the convertible have a spoiler? (Y/N) " << endl;
+                char spoilerChoice;
                 while (true) {
                     if (cin >> spoilerChoice && (spoilerChoice == 'Y' || spoilerChoice == 'y' || spoilerChoice == 'N' || spoilerChoice == 'n')) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -231,9 +225,6 @@ int main() {
                 else{
                     userConvertible.setSpoiler(false);
                 }
-
-
-
 
                 /*
                  * Set top length
@@ -358,6 +349,7 @@ int main() {
                  * Set winch
                  */
                 cout << "Does the Off-Road Vehicle have a winch? Y/N" << endl;
+                char winch;
                 while (true) {
                     if (cin >> winch && (winch == 'Y' || winch == 'y' || winch == 'N' || winch == 'n')) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -469,7 +461,7 @@ int main() {
                 /*
                  * Set trunk size
                  */
-                cout << "Enter the truck size: ";
+                cout << "Enter the trunk size: ";
                 while (true) {
                     if (cin >> trunkSize && trunkSize > 0) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -590,6 +582,7 @@ int main() {
                  * Set liftKit
                  */
                 cout << "Does the vehicle have a lift kit? (Y/N) " << endl;
+                char liftKit;
                 while (true) {
                     if (cin >> liftKit && (liftKit == 'Y' || liftKit == 'y' || liftKit == 'N' || liftKit == 'n')) {
                         cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
@@ -617,10 +610,10 @@ int main() {
         cout << "There are " << VehicleInventory.size() << " vehicles in the inventory" << endl;
 
         // Ask if user wants to add another vehicle to the inventory
-        cout << "Would you like to add another vehicle?" << endl;
+        cout << "Would you like to add another vehicle? Y/N" << endl;
         char addAnother;
         while (true) {
-            if (cin >> addAnother && (liftKit == 'Y' || liftKit == 'y' || liftKit == 'N' || liftKit == 'n')) {
+            if (cin >> addAnother && (addAnother == 'Y' || addAnother == 'y' || addAnother == 'N' || addAnother == 'n')) {
                 cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
                 break;
             }
@@ -629,25 +622,29 @@ int main() {
             cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
         }
 
-        if (addAnother == 'Y' || addAnother == 'y'){
+        if (addAnother == 'N' || addAnother == 'n'){
             break;
         }
 
     }
 
     // Write vector elements to .csv file
+    ofstream outputToCSV("vehicleInventory.csv");
+    for (int i = 0; i < VehicleInventory.size(); i++) {
+        outputToCSV << VehicleInventory.at(i).getVehicleYear() << ",";
+        outputToCSV << VehicleInventory.at(i).getVehicleMake() << ",";
+        outputToCSV << VehicleInventory.at(i).getVehicleModel() << ",";
+        outputToCSV << VehicleInventory.at(i).getVehiclePrice() << ",";
+        outputToCSV << VehicleInventory.at(i).getVehicleMileage() << ",";
+        outputToCSV << endl;
+    }
+
+    outputToCSV.close();
+
+    cout << "The cars you have inventoried have been output to a CSV file." << endl;
 
 
-
-
-
-
-
-
-
-
-
-
+/* Project 1 and Earlier Code for Reference */
 
     /*Car dealership;
 
@@ -658,8 +655,6 @@ int main() {
     string userVehicleModel;
     int userVehiclePrice;
     int addAnotherVehicle;
-
-
 
 
     while(true){
@@ -707,15 +702,6 @@ int main() {
     }
 */
 
-
-
-
-
-
     //dealership.printInventory();
-
-
-
-
 
 }

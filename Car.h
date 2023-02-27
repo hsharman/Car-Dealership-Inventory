@@ -27,17 +27,10 @@ private:
 
 public:
 
-    /*
-     * Default constructor
-     */
+    /* Default constructor */
     Car();
 
-
-
-
-    /*
-     * Constructor
-     */
+    /* Constructor */
     Car(int yr, string mk, string mdl, double prc, int mlge){
         int year = yr;
         string make = mk;
@@ -48,56 +41,25 @@ public:
 
     }
 
-
-
-
-
-
+    // dealership vector of car objects
     vector<Car> DealershipInventory;
 
-
-
-
     // getters
-
     int getVehicleYear();
-
     string getVehicleMake() ;
-
     string getVehicleModel();
-
     int getVehiclePrice();
-
     int getVehicleMileage();
 
 
     // setters
-
     void setVehicleYear(int yr);
-
     void setVehicleMake(string mk);
-
     void setVehicleModel(string mdl);
-
     void setVehiclePrice(int prc);
-
     void setVehicleMileage(int mlge);
 
-
-
-
-
-
-
-
-
-
     //int getVehicleType(ostream &outs, istream &ins);
-
-
-
-
-
 
 
     /*  int addAnotherVehicle(ostream &outs, istream &ins);
