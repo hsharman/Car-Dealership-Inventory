@@ -1,4 +1,3 @@
-# Harry Sharman, Wade Bradford - Open Ended Project
 # Car Dealership Inventory Program
 In this Module 2 Open Ended Project, Harry and Wade created a main program and testing program for multiple classes. The parent class of car, and the child classes of Truck, SUV, Convertible, and offroadVehicle.
 # Car Class
